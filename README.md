@@ -17,12 +17,12 @@ Ce document explique l'implémentation de deux algorithmes de Garbage Collection
 ### Exemple d'utilisation
 
 ```c
-char *str = gc_malloc(2, 1);
+char *str = gc_malloc(2, 1); // Allocation de deux bytes (function 1)
 str[0] = 'a';
 str[1] = '\0';
 
 printf("%p\n", str);
-gc_malloc(0, 0); // Libère toute la mémoire
+gc_malloc(0, 0); // Libère toute la mémoire (function 0)
 printf("%p\n", str);
 ```
 
